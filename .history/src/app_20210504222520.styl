@@ -1,0 +1,45 @@
+dark-color = #8785a2
+light-color = #f6f6f6
+light-theme-color = #ffe2e2
+theme-color = #ffc7c7
+
+.at-search-bar__input-cnt,
+.at-search-bar__placeholder-wrap {
+  height: 32PX !important;
+}
+
+.at-search-bar__placeholder,
+.at-search-bar__input {
+  height: 32PX !important;
+  line-height: 32PX !important;
+}
+
+.at-search-bar__input-cnt {
+  color: #8785a2;
+  background-color: #f6f6f6;
+}
+
+body {
+  padding-bottom: constant(safe-area-inset-bottom); /* iOS 11.0 */
+  padding-bottom: env(safe-area-inset-bottom); /* iOS 11.2 */
+}
+
+@supports ((height: constant(safe-area-inset-top)) or (height: env(safe-area-inset-top))) {
+  body {
+    /* 适配齐刘海*/
+    padding-top: constant(safe-area-inset-top);
+
+    /* 兼容 */
+    /* padding-top: env(safe-area-inset-top); */
+
+    /* padding-top: calc(40px(原来的bottom值) + constant(safe-area-inset-top)); */
+
+    /* 适配底部黑条*/
+    padding-bottom: constant(safe-area-inset-bottom);
+  }
+}
+
+page {
+  box-sizing: border-box;
+  // background: radial-gradient(black, transparent);
+}

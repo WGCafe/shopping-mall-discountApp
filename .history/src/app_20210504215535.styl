@@ -1,0 +1,25 @@
+@import "~taro-ui/dist/style/index.scss";
+body {
+  padding-bottom: constant(safe-area-inset-bottom); /* iOS 11.0 */
+  padding-bottom: env(safe-area-inset-bottom); /* iOS 11.2 */
+}
+
+@supports ((height: constant(safe-area-inset-top)) or (height: env(safe-area-inset-top))) {
+  body {
+    /* 适配齐刘海*/
+    padding-top: constant(safe-area-inset-top);
+
+    /* 兼容 */
+    /* padding-top: env(safe-area-inset-top); */
+
+    /* padding-top: calc(40px(原来的bottom值) + constant(safe-area-inset-top)); */
+
+    /* 适配底部黑条*/
+    padding-bottom: constant(safe-area-inset-bottom);
+  }
+}
+
+page {
+  box-sizing: border-box;
+  // background: radial-gradient(black, transparent);
+}

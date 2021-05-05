@@ -83,7 +83,6 @@ function Index () {
           ))
         }
       </View>
-      <ActionBar activeTab={3} />
     </View>
   )
 }

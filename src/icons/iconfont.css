@@ -1,0 +1,123 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 2527323 */
+  src: url('iconfont.woff2?t=1620214553783') format('woff2'),
+       url('iconfont.woff?t=1620214553783') format('woff'),
+       url('iconfont.ttf?t=1620214553783') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconfont-favor:before {
+  content: "\e64c";
+}
+
+.iconfont-location:before {
+  content: "\e651";
+}
+
+.iconfont-search:before {
+  content: "\e65c";
+}
+
+.iconfont-shop:before {
+  content: "\e676";
+}
+
+.iconfont-ticket:before {
+  content: "\e677";
+}
+
+.iconfont-back:before {
+  content: "\e679";
+}
+
+.iconfont-shopfill:before {
+  content: "\e697";
+}
+
+.iconfont-right:before {
+  content: "\e6a3";
+}
+
+.iconfont-home:before {
+  content: "\e6b8";
+}
+
+.iconfont-homefill:before {
+  content: "\e6bb";
+}
+
+.iconfont-selection:before {
+  content: "\e6ce";
+}
+
+.iconfont-selectionfill:before {
+  content: "\e6e1";
+}
+
+.iconfont-tagfill:before {
+  content: "\e751";
+}
+
+.iconfont-tag:before {
+  content: "\e752";
+}
+
+.iconfont-myfill:before {
+  content: "\e78c";
+}
+
+.iconfont-piclight:before {
+  content: "\e7b7";
+}
+
+.iconfont-shoplight:before {
+  content: "\e7b8";
+}
+
+.iconfont-home_light:before {
+  content: "\e7d4";
+}
+
+.iconfont-my_light:before {
+  content: "\e7d5";
+}
+
+.iconfont-search_light:before {
+  content: "\e7da";
+}
+
+.iconfont-share_light:before {
+  content: "\e7e0";
+}
+
+.iconfont-favor_light:before {
+  content: "\e7e1";
+}
+
+.iconfont-favor_fill_light:before {
+  content: "\e7ec";
+}
+
+.iconfont-location_light:before {
+  content: "\e7f3";
+}
+
+.iconfont-ticket_fill:before {
+  content: "\e800";
+}
+
+.iconfont-mall_light:before {
+  content: "\e81a";
+}
+
+.iconfont-mall_fill_light:before {
+  content: "\e81b";
+}
+

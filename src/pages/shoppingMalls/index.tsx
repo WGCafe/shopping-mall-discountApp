@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { View, Text } from '@tarojs/components'
-import { AtSearchBar, AtTabs, AtTabsPane, AtList, AtListItem } from 'taro-ui'
+import { AtTabs, AtTabsPane, AtList, AtListItem } from 'taro-ui'
 
-import Carousel from '../../components/carousel';
 import ActionBar from '../../components/actionBar';
 
 import './index.styl';
@@ -28,10 +27,6 @@ function Index () {
 
   return (
     <View style={{height: '100vh'}}>
-      <View style={{height: '30%'}}>
-        {/* 广告轮播 */}
-        <Carousel data={ADVLIST} />
-      </View>
       {/* <View>
         <Text>上海</Text>
         <AtSearchBar
@@ -79,7 +74,6 @@ function Index () {
           <View style='padding: 100px 50px;background-color: #FAFBFC;text-align: center;'>标签页二的内容</View>
         </AtTabsPane>
       </AtTabs>
-      <ActionBar activeTab={1} />
     </View>
   )
 }

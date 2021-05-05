@@ -79,7 +79,7 @@ function Index () {
           <View style='padding: 100px 50px;background-color: #FAFBFC;text-align: center;'>标签页二的内容</View>
         </AtTabsPane>
       </AtTabs>
-      <ActionBar activeTab={2} />
+      {/* <ActionBar activeTab={2} /> */}
     </View>
   )
 }

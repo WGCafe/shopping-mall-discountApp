@@ -1,12 +1,12 @@
 import React from 'react'
-import { AtTabBar } from 'taro-ui'
+import { AtTabBar, AtIcon } from 'taro-ui'
 import Taro from '@tarojs/taro';
 
 const BOTTOMLIST = [
-  { title: '首页', iconType: 'home'},
-  { title: '商场', iconType: 'shopping-mall'},
-  { title: '店铺', iconType: 'store'},
-  { title: '我的', iconType: 'user'}
+  { title: '首页', iconPrefixClass: 'iconfont', iconType: 'home_light'},
+  { title: '商场', iconPrefixClass: 'iconfont', iconType: 'mall_light'},
+  { title: '店铺', iconPrefixClass: 'iconfont', iconType: 'shoplight'},
+  { title: '我的', iconPrefixClass: 'iconfont', iconType: 'my_light'}
 ];
 
 function ActionBar({activeTab}) {

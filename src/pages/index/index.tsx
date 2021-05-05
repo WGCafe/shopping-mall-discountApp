@@ -47,11 +47,13 @@ function Index () {
         backgroundColor: '#fff',
         zIndex: 1,
         width: '100vw',
+        boxSizing: 'border-box',
+        paddingTop: statusBarHeight,
         minHeight: appHeaderHeight,
       }}>
         <AtSearchBar
           customStyle={{
-            paddingTop: statusBarHeight + (marginSides / 2),
+            paddingTop: (marginSides / 2),
             paddingBottom: marginSides,
             width: titelBarWidth,
           }}

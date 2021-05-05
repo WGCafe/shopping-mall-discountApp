@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { ScrollView, View, Text } from '@tarojs/components'
-import { AtTabs, AtTabsPane, AtList, AtListItem, AtIcon } from 'taro-ui'
+import { AtList, AtListItem, AtIcon } from 'taro-ui'
 
 import UseNavInfo from '../../components/useNavInfo';
 

@@ -60,6 +60,28 @@ function Index () {
             </View>
           </View>
         </View>
+
+        <View className="shopping-malls__item at-row at-row__align--center">
+          <View className="shopping-malls__item-image-container at-col at-col-1 at-col--auto">
+            <AtAvatar className="shopping-malls__item-image" size="large" image="https://westwoodnetlease.com/wp-content/uploads/2016/09/shopping-mall-investment.jpeg"></AtAvatar>
+          </View>
+          <View className="shopping-malls__item-summary at-col">
+            <Text className="shopping-malls__item-title">米兰 女神节洗剪吹29.9</Text>
+            <View>
+              <AtTag className="shopping-malls__item-tag">满50减20</AtTag>
+              <AtTag className="shopping-malls__item-tag">满50减20</AtTag>
+            </View>
+            <Text className="shopping-malls__item-description">[南浦大桥/陆家浜路]</Text>
+            <View className="at-row at-row__justify--between">
+              <View className="at-col">
+                <Text className="shopping-malls__countdown">还有2天</Text>
+              </View>
+              <View className="at-col at-col-1 at-col--auto">
+                <AtButton type="primary" size="small" circle={true} className="shopping-malls__item-button">马上抢</AtButton>
+              </View>
+            </View>
+          </View>
+        </View>
 {/*
         <AtList customStyle={{marginTop: 20}}>
           <AtListItem

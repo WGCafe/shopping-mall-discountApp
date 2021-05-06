@@ -60,6 +60,28 @@ function Index () {
             </View>
           </View>
         </View>
+
+        <View className="stores__item at-row at-row__align--center">
+          <View className="stores__item-image-container at-col at-col-1 at-col--auto">
+            <AtAvatar className="stores__item-image" size="large" image="https://www.haagendazs.us/sites/site.prod1.haagendazs.us/files/shops/sept2019-FindaShop_-516x372b.png"></AtAvatar>
+          </View>
+          <View className="stores__item-summary at-col">
+            <Text className="stores__item-title">米兰 女神节洗剪吹29.9</Text>
+            <View>
+              <AtTag className="stores__item-tag">满50减20</AtTag>
+              <AtTag className="stores__item-tag">满50减20</AtTag>
+            </View>
+            <Text className="stores__item-description">[南浦大桥/陆家浜路]</Text>
+            <View className="at-row at-row__justify--between">
+              <View className="at-col">
+                <Text className="stores__countdown">还有2天</Text>
+              </View>
+              <View className="at-col at-col-1 at-col--auto">
+                <AtButton type="primary" size="small" circle={true} className="stores__item-button">马上抢</AtButton>
+              </View>
+            </View>
+          </View>
+        </View>
 {/*
         <AtList customStyle={{marginTop: 20}}>
           <AtListItem

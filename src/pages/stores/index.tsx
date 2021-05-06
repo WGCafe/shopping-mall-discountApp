@@ -21,7 +21,7 @@ function Index () {
         paddingTop: statusBarHeight + (marginSides / 2),
         minHeight: appHeaderHeight,
       }}>
-        <View className="at-row" style={{
+        <View className="at-row at-row__align--center" style={{
           boxSizing: 'border-box',
           padding: marginSides,
           width: titelBarWidth,

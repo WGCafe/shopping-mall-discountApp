@@ -41,7 +41,7 @@ function Index () {
       }}>
         <View className="stores__item at-row at-row__align--center">
           <View className="stores__item-image-container at-col at-col-1 at-col--auto">
-            <AtAvatar className="stores__item-image" size="large" image="https://jdc.jd.com/img/300"></AtAvatar>
+            <AtAvatar className="stores__item-image" size="large" image="https://www.haagendazs.us/sites/site.prod1.haagendazs.us/files/shops/sept2019-FindaShop_-516x372b.png"></AtAvatar>
           </View>
           <View className="stores__item-summary at-col">
             <Text className="stores__item-title">米兰 女神节洗剪吹29.9</Text>

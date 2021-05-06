@@ -41,7 +41,7 @@ function Index () {
       }}>
         <View className="shopping-malls__item at-row at-row__align--center">
           <View className="shopping-malls__item-image-container at-col at-col-1 at-col--auto">
-            <AtAvatar className="shopping-malls__item-image" size="large" image="https://jdc.jd.com/img/300"></AtAvatar>
+            <AtAvatar className="shopping-malls__item-image" size="large" image="https://westwoodnetlease.com/wp-content/uploads/2016/09/shopping-mall-investment.jpeg"></AtAvatar>
           </View>
           <View className="shopping-malls__item-summary at-col">
             <Text className="shopping-malls__item-title">米兰 女神节洗剪吹29.9</Text>

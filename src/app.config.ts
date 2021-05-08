@@ -7,6 +7,7 @@ export default {
     'pages/help/index',
     'pages/shoppingMalls/index',
     'pages/stores/index',
+    'pages/search/index',
   ],
   window: {
     backgroundTextStyle: 'light',
@@ -40,5 +41,10 @@ export default {
       text: '我的'
     }],
     custom: false
+  },
+  permission: {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
   }
 }

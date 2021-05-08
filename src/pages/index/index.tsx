@@ -1,18 +1,13 @@
-import React, { useState, useEffect } from 'react'
-import { View, Text } from '@tarojs/components'
+import React from 'react'
+import { View } from '@tarojs/components'
 import { AtSearchBar, AtGrid } from 'taro-ui'
+import Taro from '@tarojs/taro'
 
 import UseNavInfo from '../../components/useNavInfo';
 import Carousel from '../../components/carousel';
-import ActionBar from '../../components/actionBar';
 
 import './index.styl';
 
-const TABLIST = [{
-  title: '商场'
-}, {
-  title: '商铺'
-}];
 const ADVLIST = [{
   text: '广告一',
   src: 'https://blog.viewneo.com/wp-content/uploads/2020/07/shopping-mall-with-3-floors.jpg',
@@ -28,8 +23,6 @@ const ADVLIST = [{
 }];
 
 function Index () {
-  const [keyword, setKeyword] = useState('');
-  const [tab, setTab] = useState(0);
   const { statusBarHeight, appHeaderHeight, titelBarWidth, marginSides } = UseNavInfo();
 
   // useEffect(() => {
@@ -41,7 +34,7 @@ function Index () {
   // }, [])
 
   return (
-    <View className="home-page" style={{height: '100vh'}}>
+    <View className='home-page' style={{height: '100vh'}}>
       <View style={{
         position: 'fixed',
         backgroundColor: '#fff',
@@ -50,17 +43,22 @@ function Index () {
         boxSizing: 'border-box',
         paddingTop: statusBarHeight,
         minHeight: appHeaderHeight,
-      }}>
+      }}
+      >
         <AtSearchBar
           customStyle={{
             paddingTop: (marginSides / 2),
             paddingBottom: marginSides,
             width: titelBarWidth,
           }}
-          disabled={true}
-          onChange={keyword => setKeyword(keyword)}
-          value={keyword}
-          className="search-input"
+          value=''
+          className='search-input'
+          onChange={() => {}}
+          onFocus={() => {
+            Taro.navigateTo({
+              url: '/pages/search/index',
+            })
+          }}
         />
       </View>
       <View style={{height: '100vw'}}>
@@ -81,7 +79,8 @@ function Index () {
             image: '',
           },
         ]
-      } />
+      }
+      />
     </View>
   )
 }

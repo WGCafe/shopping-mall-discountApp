@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { ScrollView, View, Text } from '@tarojs/components'
 import { AtIcon, AtButton, AtAvatar, AtTag } from 'taro-ui'
+import Taro from '@tarojs/taro';
 
 import UseNavInfo from '../../components/useNavInfo';
 
@@ -9,6 +10,12 @@ function Index () {
   const [keyword, setKeyword] = useState('');
   const [tab, setTab] = useState(0);
   const { statusBarHeight, appHeaderHeight, titelBarWidth, marginSides } = UseNavInfo();
+
+  const handleClick = value => {
+    Taro.redirectTo({
+      url: `/pages/storeOrMallDetail/index`
+    });
+  };
 
   return (
     <View className="shopping-malls" style={{height: '100vh'}}>
@@ -39,7 +46,7 @@ function Index () {
       <ScrollView style={{
         paddingTop: appHeaderHeight,
       }}>
-        <View className="shopping-malls__item at-row at-row__align--center">
+        <View className="shopping-malls__item at-row at-row__align--center" onClick={handleClick}>
           <View className="shopping-malls__item-image-container at-col at-col-1 at-col--auto">
             <AtAvatar className="shopping-malls__item-image" size="large" image="https://westwoodnetlease.com/wp-content/uploads/2016/09/shopping-mall-investment.jpeg"></AtAvatar>
           </View>
@@ -61,7 +68,7 @@ function Index () {
           </View>
         </View>
 
-        <View className="shopping-malls__item at-row at-row__align--center">
+        <View className="shopping-malls__item at-row at-row__align--center" onClick={handleClick}>
           <View className="shopping-malls__item-image-container at-col at-col-1 at-col--auto">
             <AtAvatar className="shopping-malls__item-image" size="large" image="https://westwoodnetlease.com/wp-content/uploads/2016/09/shopping-mall-investment.jpeg"></AtAvatar>
           </View>

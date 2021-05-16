@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { ScrollView, View, Text } from '@tarojs/components'
 import { AtIcon, AtButton, AtAvatar, AtTag } from 'taro-ui'
+import Taro from '@tarojs/taro';
 
 import UseNavInfo from '../../components/useNavInfo';
 
@@ -10,22 +11,40 @@ function Index () {
   const [tab, setTab] = useState(0);
   const { statusBarHeight, appHeaderHeight, titelBarWidth, marginSides } = UseNavInfo();
 
+  const handleClick = () => {
+    Taro.redirectTo({
+      url: `/pages/storeOrMallDetail/index`
+    });
+  };
+
+  const handleVisitSearchPage = () => {
+    Taro.redirectTo({
+      url: `/pages/shoppingMalls/search/index`
+    });
+  }
+
   return (
     <View className="shopping-malls" style={{height: '100vh'}}>
-      <View style={{
-        position: 'fixed',
-        backgroundColor: '#fff',
-        zIndex: 1,
-        width: '100vw',
-        boxSizing: 'border-box',
-        paddingTop: statusBarHeight + (marginSides / 2),
-        minHeight: appHeaderHeight,
-      }}>
-        <View className="at-row at-row__align--center" style={{
+      <View
+        style={{
+          position: 'fixed',
+          backgroundColor: '#fff',
+          zIndex: 1,
+          width: '100vw',
           boxSizing: 'border-box',
-          padding: marginSides,
-          width: titelBarWidth,
-        }}>
+          paddingTop: statusBarHeight + (marginSides / 2),
+          minHeight: appHeaderHeight,
+        }}
+      >
+        <View
+          className="at-row at-row__align--center"
+          style={{
+            boxSizing: 'border-box',
+            padding: marginSides,
+            width: titelBarWidth,
+          }}
+          onClick={handleVisitSearchPage}
+        >
           <AtIcon
             className="at-col at-col-1 at-col--auto"
             customStyle={{
@@ -33,13 +52,13 @@ function Index () {
             }}
             prefixClass='iconfont' value='location_light'
           />
-          <Text className="at-col" style={{fontSize: 14, verticalAlign: 'middle',}}>上海</Text>
+          <Text className="at-col" style={{fontSize: 14, verticalAlign: 'middle',}}>上海BFC外滩金融中心GO店</Text>
         </View>
       </View>
       <ScrollView style={{
         paddingTop: appHeaderHeight,
       }}>
-        <View className="shopping-malls__item at-row at-row__align--center">
+        <View className="shopping-malls__item at-row at-row__align--center" onClick={handleClick}>
           <View className="shopping-malls__item-image-container at-col at-col-1 at-col--auto">
             <AtAvatar className="shopping-malls__item-image" size="large" image="https://westwoodnetlease.com/wp-content/uploads/2016/09/shopping-mall-investment.jpeg"></AtAvatar>
           </View>
@@ -61,7 +80,7 @@ function Index () {
           </View>
         </View>
 
-        <View className="shopping-malls__item at-row at-row__align--center">
+        <View className="shopping-malls__item at-row at-row__align--center" onClick={() => handleClick}>
           <View className="shopping-malls__item-image-container at-col at-col-1 at-col--auto">
             <AtAvatar className="shopping-malls__item-image" size="large" image="https://westwoodnetlease.com/wp-content/uploads/2016/09/shopping-mall-investment.jpeg"></AtAvatar>
           </View>

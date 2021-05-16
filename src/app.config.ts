@@ -7,7 +7,9 @@ export default {
     'pages/help/index',
     'pages/shoppingMalls/index',
     'pages/stores/index',
-    'pages/search/index',
+    'pages/storeOrMallDetail/index',
+    'pages/shoppingMalls/search/index',
+    'pages/stores/search/index'
   ],
   window: {
     backgroundTextStyle: 'light',

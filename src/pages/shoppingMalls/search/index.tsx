@@ -256,6 +256,7 @@ function Index () {
           <View className="search__search-modal">
             <AtSearchBar
               showActionButton
+              actionName="取消"
               value={''}
               onChange={() => {}}
               onActionClick={() => {}}

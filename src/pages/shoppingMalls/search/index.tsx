@@ -41,11 +41,13 @@ function Index () {
       <AtTabs current={currentTab} tabList={tabList} onClick={switchTab}>
         <AtTabsPane current={currentTab} index={0} >
           <View className="at-row at-row__align--center">
-            <View className="at-col">
-              <Text>上海 所有区</Text>
+            <View className="search__region-selector at-col">
+              <Text className="search__region-selector-text">上海 所有区</Text>
               <AtIcon
+                className="search__region-selector-icon"
                 customStyle={{
                   verticalAlign: 'middle',
+                  fontSize: '12PX',
                 }}
                 prefixClass='iconfont' value='right'
               />

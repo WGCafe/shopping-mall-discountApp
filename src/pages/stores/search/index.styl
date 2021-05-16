@@ -4,12 +4,24 @@
     box-sizing: border-box;
   }
 
-  &__region-selector-text {
+  &__region-selector-text,
+  &__region-selector-icon {
     font-size: 12PX;
   }
 
-  &__region-selector-icon {
+  &__search-button {
+    display: inline-block;
+    padding: 5px 20px 10px;
+    margin: 15px 20px;
+    background-color: #f6f6f6;
+    border-radius: 40px;
+  }
+
+  &__search-button-text,
+  &__search-button-icon {
+    vertical-align: middle;
     font-size: 12PX;
+    color: #8785a2;
   }
 
   &__item {
@@ -83,5 +95,14 @@
   &__item-distance {
     font-size: 10PX;
     color: #a7a6b3;
+  }
+
+  &__search-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #FFFFFF;
   }
 }

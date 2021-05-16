@@ -29,6 +29,14 @@ theme-color = #ffc7c7
   color: theme-color;
 }
 
+.at-tabs__item--active {
+  color: theme-color;
+}
+
+.at-tabs__item-underline {
+  background-color: theme-color;
+}
+
 body {
   padding-bottom: constant(safe-area-inset-bottom); /* iOS 11.0 */
   padding-bottom: env(safe-area-inset-bottom); /* iOS 11.2 */
@@ -52,4 +60,20 @@ body {
 page {
   box-sizing: border-box;
   // background: radial-gradient(black, transparent);
+}
+
+.customize-tag {
+  &.at-tag {
+   padding: 5px 10px;
+    margin: 0 10px;
+    border: 1px solid theme-color;
+    height: auto;
+    line-height: 1.4em;
+    color: theme-color;
+    background-color: #FFFFFF;
+  }
+
+  &__group {
+    margin: 5px 0;
+  }
 }

@@ -7,6 +7,7 @@ import { AtSearchBar, AtIcon, AtTag, AtTabs, AtTabsPane } from 'taro-ui'
 import './index.styl';
 
 function Index () {
+  const [modalDisplayState, setModalDisplayState] = useState(false);
   const [currentLocation, setCurrentLocation] = useState({
     latitude: 0,
     longitude: 0
@@ -27,6 +28,9 @@ function Index () {
   const switchTab = (value) => {
     setCurrentTab(value);
   };
+  const showSearchModal = () => {
+    setModalDisplayState(true);
+  }
 
   useEffect(() => {
     Taro.getLocation({
@@ -52,13 +56,19 @@ function Index () {
                 prefixClass='iconfont' value='right'
               />
             </View>
-            <View className="at-col">
-              <View>
+            <View
+              className="at-col"
+              style={{
+                textAlign: 'right'
+              }}
+              onClick={showSearchModal}
+            >
+              <View className="search__search-button">
                 <AtIcon
                   className="search__search-button-icon"
                   customStyle={{
                     verticalAlign: 'middle',
-                    fontSize: '12PX',
+                    fontSize: '14PX',
                   }}
                   prefixClass='iconfont' value='search'
                 />
@@ -241,14 +251,18 @@ function Index () {
           </ScrollView>
         </AtTabsPane>
       </AtTabs>
-      <View className="search__search-modal">
-        <AtSearchBar
-          showActionButton
-          value={''}
-          onChange={() => {}}
-          onActionClick={() => {}}
-        />
-      </View>
+      {
+        modalDisplayState ? (
+          <View className="search__search-modal">
+            <AtSearchBar
+              showActionButton
+              value={''}
+              onChange={() => {}}
+              onActionClick={() => {}}
+            />
+          </View>
+        ) : null
+      }
     </View>
   )
 }

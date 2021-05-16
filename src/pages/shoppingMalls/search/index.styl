@@ -4,12 +4,15 @@
     box-sizing: border-box;
   }
 
-  &__region-selector-text {
+  &__region-selector-text,
+  &__region-selector-icon {
     font-size: 12PX;
   }
 
-  &__region-selector-icon {
+  &__search-button-text,
+  &__search-button-icon {
     font-size: 12PX;
+    color: #8785a2;
   }
 
   &__item {
@@ -83,5 +86,15 @@
   &__item-distance {
     font-size: 10PX;
     color: #a7a6b3;
+  }
+
+  &__search-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #FFFFFF;
   }
 }

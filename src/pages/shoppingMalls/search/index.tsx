@@ -53,11 +53,17 @@ function Index () {
               />
             </View>
             <View className="at-col">
-              <AtSearchBar
-                value={''}
-                onChange={() => {}}
-                onActionClick={() => {}}
-              />
+              <View>
+                <AtIcon
+                  className="search__search-button-icon"
+                  customStyle={{
+                    verticalAlign: 'middle',
+                    fontSize: '12PX',
+                  }}
+                  prefixClass='iconfont' value='search'
+                />
+                <Text className="search__search-button-text">搜索</Text>
+              </View>
             </View>
           </View>
           <Map
@@ -235,6 +241,14 @@ function Index () {
           </ScrollView>
         </AtTabsPane>
       </AtTabs>
+      <View className="search__search-modal">
+        <AtSearchBar
+          showActionButton
+          value={''}
+          onChange={() => {}}
+          onActionClick={() => {}}
+        />
+      </View>
     </View>
   )
 }

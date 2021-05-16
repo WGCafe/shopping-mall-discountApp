@@ -9,7 +9,8 @@ export default {
     'pages/stores/index',
     'pages/storeOrMallDetail/index',
     'pages/shoppingMalls/search/index',
-    'pages/stores/search/index'
+    'pages/stores/search/index',
+    'pages/region/index',
   ],
   window: {
     backgroundTextStyle: 'light',

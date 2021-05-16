@@ -24,6 +24,12 @@ function Index () {
     });
   }
 
+  const handleVisitRegionPage = () => {
+    Taro.redirectTo({
+      url: `/pages/region/index`
+    });
+  }
+
   return (
     <View className='shopping-malls' style={{height: '100vh'}}>
       <View
@@ -53,7 +59,7 @@ function Index () {
             }}
             prefixClass='iconfont' value='location_light'
           />
-          <Text className='at-col' style={{fontSize: 14, verticalAlign: 'middle',}}>上海BFC外滩金融中心GO店</Text>
+          <Text className='at-col' style={{fontSize: 14, verticalAlign: 'middle',}} onClick={handleVisitRegionPage}>上海BFC外滩金融中心GO店</Text>
         </View>
       </View>
       <ScrollView style={{

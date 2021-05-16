@@ -1,8 +1,8 @@
 import { Component } from 'react'
 import Taro from '@tarojs/taro'
 
-import 'taro-ui/dist/style/index.scss'
-import './app.styl'
+import 'taro-ui/dist/style/index.scss';
+import './app.styl';
 
 class App extends Component {
 

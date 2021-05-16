@@ -66,9 +66,9 @@ function Index () {
           </View>
           <View className='shopping-malls__item-summary at-col'>
             <Text className='shopping-malls__item-title'>米兰 女神节洗剪吹29.9</Text>
-            <View>
-              <AtTag className='shopping-malls__item-tag'>满50减20</AtTag>
-              <AtTag className='shopping-malls__item-tag'>满50减20</AtTag>
+            <View className='customize-tag__group'>
+              <AtTag className='customize-tag'>满50减20</AtTag>
+              <AtTag className='customize-tag'>满50减20</AtTag>
             </View>
             <Text className='shopping-malls__item-description'>[南浦大桥/陆家浜路]</Text>
             <View className='at-row at-row__justify--between'>
@@ -88,9 +88,9 @@ function Index () {
           </View>
           <View className='shopping-malls__item-summary at-col'>
             <Text className='shopping-malls__item-title'>米兰 女神节洗剪吹29.9</Text>
-            <View>
-              <AtTag className='shopping-malls__item-tag'>满50减20</AtTag>
-              <AtTag className='shopping-malls__item-tag'>满50减20</AtTag>
+            <View className='customize-tag__group'>
+              <AtTag className='customize-tag'>满50减20</AtTag>
+              <AtTag className='customize-tag'>满50减20</AtTag>
             </View>
             <Text className='shopping-malls__item-description'>[南浦大桥/陆家浜路]</Text>
             <View className='at-row at-row__justify--between'>

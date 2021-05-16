@@ -6,6 +6,7 @@ import Taro from '@tarojs/taro';
 import UseNavInfo from '../../components/useNavInfo';
 
 import './index.styl';
+
 function Index () {
   const [keyword, setKeyword] = useState('');
   const [tab, setTab] = useState(0);
@@ -24,7 +25,7 @@ function Index () {
   }
 
   return (
-    <View className="shopping-malls" style={{height: '100vh'}}>
+    <View className='shopping-malls' style={{height: '100vh'}}>
       <View
         style={{
           position: 'fixed',
@@ -37,7 +38,7 @@ function Index () {
         }}
       >
         <View
-          className="at-row at-row__align--center"
+          className='at-row at-row__align--center'
           style={{
             boxSizing: 'border-box',
             padding: marginSides,
@@ -46,57 +47,58 @@ function Index () {
           onClick={handleVisitSearchPage}
         >
           <AtIcon
-            className="at-col at-col-1 at-col--auto"
+            className='at-col at-col-1 at-col--auto'
             customStyle={{
               verticalAlign: 'middle',
             }}
             prefixClass='iconfont' value='location_light'
           />
-          <Text className="at-col" style={{fontSize: 14, verticalAlign: 'middle',}}>上海BFC外滩金融中心GO店</Text>
+          <Text className='at-col' style={{fontSize: 14, verticalAlign: 'middle',}}>上海BFC外滩金融中心GO店</Text>
         </View>
       </View>
       <ScrollView style={{
         paddingTop: appHeaderHeight,
-      }}>
-        <View className="shopping-malls__item at-row at-row__align--center" onClick={handleClick}>
-          <View className="shopping-malls__item-image-container at-col at-col-1 at-col--auto">
-            <AtAvatar className="shopping-malls__item-image" size="large" image="https://westwoodnetlease.com/wp-content/uploads/2016/09/shopping-mall-investment.jpeg"></AtAvatar>
+      }}
+      >
+        <View className='shopping-malls__item at-row at-row__align--center' onClick={handleClick}>
+          <View className='shopping-malls__item-image-container at-col at-col-1 at-col--auto'>
+            <AtAvatar className='shopping-malls__item-image' size='large' image='https://westwoodnetlease.com/wp-content/uploads/2016/09/shopping-mall-investment.jpeg'></AtAvatar>
           </View>
-          <View className="shopping-malls__item-summary at-col">
-            <Text className="shopping-malls__item-title">米兰 女神节洗剪吹29.9</Text>
+          <View className='shopping-malls__item-summary at-col'>
+            <Text className='shopping-malls__item-title'>米兰 女神节洗剪吹29.9</Text>
             <View>
-              <AtTag className="shopping-malls__item-tag">满50减20</AtTag>
-              <AtTag className="shopping-malls__item-tag">满50减20</AtTag>
+              <AtTag className='shopping-malls__item-tag'>满50减20</AtTag>
+              <AtTag className='shopping-malls__item-tag'>满50减20</AtTag>
             </View>
-            <Text className="shopping-malls__item-description">[南浦大桥/陆家浜路]</Text>
-            <View className="at-row at-row__justify--between">
-              <View className="at-col">
-                <Text className="shopping-malls__countdown">还有2天</Text>
+            <Text className='shopping-malls__item-description'>[南浦大桥/陆家浜路]</Text>
+            <View className='at-row at-row__justify--between'>
+              <View className='at-col'>
+                <Text className='shopping-malls__countdown'>还有2天</Text>
               </View>
-              <View className="at-col at-col-1 at-col--auto">
-                <AtButton type="primary" size="small" circle={true} className="shopping-malls__item-button">马上抢</AtButton>
+              <View className='at-col at-col-1 at-col--auto'>
+                <AtButton type='primary' size='small' circle className='shopping-malls__item-button'>马上抢</AtButton>
               </View>
             </View>
           </View>
         </View>
 
-        <View className="shopping-malls__item at-row at-row__align--center" onClick={() => handleClick}>
-          <View className="shopping-malls__item-image-container at-col at-col-1 at-col--auto">
-            <AtAvatar className="shopping-malls__item-image" size="large" image="https://westwoodnetlease.com/wp-content/uploads/2016/09/shopping-mall-investment.jpeg"></AtAvatar>
+        <View className='shopping-malls__item at-row at-row__align--center' onClick={() => handleClick}>
+          <View className='shopping-malls__item-image-container at-col at-col-1 at-col--auto'>
+            <AtAvatar className='shopping-malls__item-image' size='large' image='https://westwoodnetlease.com/wp-content/uploads/2016/09/shopping-mall-investment.jpeg'></AtAvatar>
           </View>
-          <View className="shopping-malls__item-summary at-col">
-            <Text className="shopping-malls__item-title">米兰 女神节洗剪吹29.9</Text>
+          <View className='shopping-malls__item-summary at-col'>
+            <Text className='shopping-malls__item-title'>米兰 女神节洗剪吹29.9</Text>
             <View>
-              <AtTag className="shopping-malls__item-tag">满50减20</AtTag>
-              <AtTag className="shopping-malls__item-tag">满50减20</AtTag>
+              <AtTag className='shopping-malls__item-tag'>满50减20</AtTag>
+              <AtTag className='shopping-malls__item-tag'>满50减20</AtTag>
             </View>
-            <Text className="shopping-malls__item-description">[南浦大桥/陆家浜路]</Text>
-            <View className="at-row at-row__justify--between">
-              <View className="at-col">
-                <Text className="shopping-malls__countdown">还有2天</Text>
+            <Text className='shopping-malls__item-description'>[南浦大桥/陆家浜路]</Text>
+            <View className='at-row at-row__justify--between'>
+              <View className='at-col'>
+                <Text className='shopping-malls__countdown'>还有2天</Text>
               </View>
-              <View className="at-col at-col-1 at-col--auto">
-                <AtButton type="primary" size="small" circle={true} className="shopping-malls__item-button">马上抢</AtButton>
+              <View className='at-col at-col-1 at-col--auto'>
+                <AtButton type='primary' size='small' circle className='shopping-malls__item-button'>马上抢</AtButton>
               </View>
             </View>
           </View>

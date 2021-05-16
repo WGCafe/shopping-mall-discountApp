@@ -31,6 +31,9 @@ function Index () {
   const showSearchModal = () => {
     setModalDisplayState(true);
   }
+  const hideSearchModal = () => {
+    setModalDisplayState(false);
+  }
 
   useEffect(() => {
     Taro.getLocation({
@@ -259,7 +262,7 @@ function Index () {
               actionName="取消"
               value={''}
               onChange={() => {}}
-              onActionClick={() => {}}
+              onActionClick={hideSearchModal}
             />
           </View>
         ) : null

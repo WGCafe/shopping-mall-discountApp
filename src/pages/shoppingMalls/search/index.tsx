@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Taro from '@tarojs/taro';
 
 import { Map, View, ScrollView, Text } from '@tarojs/components'
-import { AtSearchBar, AtIcon, AtTag, AtTabs, AtTabsPane } from 'taro-ui'
+import { AtSearchBar, AtIcon, AtTag, AtTabs, AtTabsPane, AtList, AtListItem } from 'taro-ui'
 
 import './index.styl';
 
@@ -44,7 +44,7 @@ function Index () {
   })}, []);
 
   return (
-    <View>
+    <View className="search">
       <AtTabs current={currentTab} tabList={tabList} onClick={switchTab}>
         <AtTabsPane current={currentTab} index={0} >
           <View className="at-row at-row__align--center">
@@ -264,6 +264,16 @@ function Index () {
               onChange={() => {}}
               onActionClick={hideSearchModal}
             />
+
+            <ScrollView>
+              <AtList>
+                <AtListItem
+                  note='描述信息'
+                  title='标题文字标题文字标题文字标题文字标题文字'
+                  extraText='35km'
+                />
+              </AtList>
+            </ScrollView>
           </View>
         ) : null
       }

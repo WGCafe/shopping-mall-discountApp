@@ -105,3 +105,6 @@ dist
 
 
 .history/
+
+.DS_Store
+src/pages/.DS_Store

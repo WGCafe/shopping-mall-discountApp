@@ -35,6 +35,12 @@ function Index () {
     setModalDisplayState(false);
   }
 
+  const handleVisitRegionPage = () => {
+    Taro.redirectTo({
+      url: `/pages/region/index`
+    });
+  }
+
   useEffect(() => {
     Taro.getLocation({
       type: 'wgs84',
@@ -47,7 +53,10 @@ function Index () {
     <View className="search">
       <AtTabs current={currentTab} tabList={tabList} onClick={switchTab}>
         <AtTabsPane current={currentTab} index={0} >
-          <View className="at-row at-row__align--center">
+          <View
+            className="at-row at-row__align--center"
+            onClick={handleVisitRegionPage}
+          >
             <View className="search__region-selector at-col">
               <Text className="search__region-selector-text">上海 所有区</Text>
               <AtIcon

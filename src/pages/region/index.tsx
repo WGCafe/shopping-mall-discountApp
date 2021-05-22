@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import { View } from '@tarojs/components'
-import { AtIndexes, AtTabs, AtTabsPane } from 'taro-ui';
+import { View, Text } from '@tarojs/components'
+import { AtIndexes, AtTabs, AtTabsPane, AtIcon } from 'taro-ui';
 
 import {CITY, AREA} from './constants';
 import UseNavInfo from '../../components/useNavInfo';
 
 const Index = () => {
-  const { statusBarHeight, appHeaderHeight, marginSides } = UseNavInfo();
+  const { statusBarHeight, appHeaderHeight, titelBarWidth, marginSides } = UseNavInfo();
   const [tab, setTab] = useState(0);
   const [tabList, setTabList] = useState([
     {title: '市'},
@@ -20,21 +20,39 @@ const Index = () => {
   };
 
   return (
-    <View
-      style={{
-        position: 'fixed',
-        backgroundColor: '#fff',
-        zIndex: 1,
-        width: '100vw',
-        boxSizing: 'border-box',
-        paddingTop: statusBarHeight + (marginSides / 2),
-        minHeight: appHeaderHeight,
-      }}
-    >
+    <View>
+      <View
+        style={{
+          position: 'fixed',
+          backgroundColor: '#fff',
+          zIndex: 1,
+          width: '100vw',
+          boxSizing: 'border-box',
+          paddingTop: statusBarHeight + (marginSides / 2),
+          minHeight: appHeaderHeight,
+        }}
+      >
+        <View
+          className='at-row at-row__align--center'
+          style={{
+            boxSizing: 'border-box',
+            padding: marginSides,
+            width: titelBarWidth,
+          }}
+        >
+          <AtIcon
+            className='at-col at-col-1 at-col--auto'
+            customStyle={{
+              verticalAlign: 'middle',
+            }}
+            prefixClass='iconfont' value='back'
+          />
+        </View>
+      </View>
       <AtTabs current={tab} tabList={tabList} onClick={onChangeTab}>
         <AtTabsPane current={tab} index={0} >
-          <View style='height:100vh'>
-            <AtIndexes list={CITY} onClick={item => {
+          <View>
+            <AtIndexes topKey="" list={CITY} onClick={item => {
               const {name, provinceCode} = item;
 
               setTabList([
@@ -45,7 +63,7 @@ const Index = () => {
               ]);
               setTab(1);
               const newArea = [];
-              
+
               AREA.filter(({items}) => items.find(it => it.provinceCode === provinceCode)).forEach(({items, key, title}, index) => {
                 const match = items.filter(it => it.provinceCode === provinceCode);
 

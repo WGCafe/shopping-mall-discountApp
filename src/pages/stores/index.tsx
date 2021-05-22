@@ -98,42 +98,6 @@ function Index () {
             </View>
           </View>
         </View>
-{/*
-        <AtList customStyle={{marginTop: 20}}>
-          <AtListItem
-            title='米兰 女神节洗剪吹29.9'
-            note='[南浦大桥/陆家浜路]'
-            thumb='https://www.wpexplorer.com/wp-content/uploads/theme-plugin-placeholder.png'
-            extraThumb="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t10660/330/203667368/1672/801735d7/59c85643N31e68303.png"
-            extraText="test"
-            iconInfo={{ size: 25, color: '#78A4FA', value: 'item-button', prefixClass: "iconfont" }}
-          ><AtButton>按钮文案</AtButton></AtListItem>
-          <AtListItem
-            title='注册会员全场五折'
-            note='区县/商圈 商户类型'
-            thumb='https://www.wpexplorer.com/wp-content/uploads/theme-plugin-placeholder.png'
-          />
-          <AtListItem
-            title='新店开业领取满减券'
-            note='区县/商圈 商户类型'
-            thumb='https://www.wpexplorer.com/wp-content/uploads/theme-plugin-placeholder.png'
-          />
-          <AtListItem
-            title='奶茶新店开业'
-            note='全场买一送一'
-            thumb='https://www.wpexplorer.com/wp-content/uploads/theme-plugin-placeholder.png'
-          />
-          <AtListItem
-            title='第一百货年中大促'
-            note='满减/折上折'
-            thumb='https://www.wpexplorer.com/wp-content/uploads/theme-plugin-placeholder.png'
-          />
-          <AtListItem
-            title='第一百货年中大促'
-            note='满减/折上折'
-            thumb='https://www.wpexplorer.com/wp-content/uploads/theme-plugin-placeholder.png'
-          />
-        </AtList> */}
       </ScrollView>
     </View>
   )

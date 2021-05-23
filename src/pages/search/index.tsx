@@ -3,10 +3,12 @@ import Taro from '@tarojs/taro';
 
 import { Map, View, ScrollView, Text } from '@tarojs/components'
 import { AtSearchBar, AtIcon, AtTag, AtTabs, AtTabsPane, AtList, AtListItem } from 'taro-ui'
+import UseNavInfo from '../../components/useNavInfo';
 
 import './index.styl';
 
 function Index () {
+  const { statusBarHeight, appHeaderHeight, titelBarWidth, marginSides } = UseNavInfo();
   const [modalDisplayState, setModalDisplayState] = useState(false);
   const [currentLocation, setCurrentLocation] = useState({
     latitude: 0,
@@ -41,6 +43,12 @@ function Index () {
     });
   }
 
+  const handelClickBackButton = () => {
+    Taro.navigateBack({
+      delta: 1
+    });
+  };
+
   useEffect(() => {
     Taro.getLocation({
       type: 'wgs84',
@@ -51,7 +59,41 @@ function Index () {
 
   return (
     <View className="search">
-      <AtTabs current={currentTab} tabList={tabList} onClick={switchTab}>
+      <View
+        style={{
+          position: 'fixed',
+          backgroundColor: '#fff',
+          zIndex: 1,
+          width: '100vw',
+          boxSizing: 'border-box',
+          paddingTop: statusBarHeight + (marginSides / 2),
+          minHeight: appHeaderHeight,
+        }}
+      >
+        <View
+          className='at-row at-row__align--center'
+          style={{
+            boxSizing: 'border-box',
+            width: titelBarWidth,
+          }}
+        >
+          <AtIcon
+            className='at-col at-col-1 at-col--auto'
+            customStyle={{
+              verticalAlign: 'middle',
+              padding: marginSides,
+            }}
+            prefixClass='iconfont' value='back'
+            onClick={handelClickBackButton}
+          />
+        </View>
+      </View>
+      <AtTabs
+        customStyle={{
+          paddingTop: appHeaderHeight,
+        }}
+        current={currentTab} tabList={tabList} onClick={switchTab}
+      >
         <AtTabsPane current={currentTab} index={0} >
           <View
             className="at-row at-row__align--center"

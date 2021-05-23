@@ -19,7 +19,7 @@ function Index () {
 
   const handleVisitSearchPage = () => {
     Taro.redirectTo({
-      url: `/pages/stores/search/index`
+      url: `/pages/search/index`
     });
   }
 

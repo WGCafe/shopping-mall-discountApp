@@ -8,8 +8,7 @@ export default {
     'pages/shoppingMalls/index',
     'pages/stores/index',
     'pages/storeOrMallDetail/index',
-    'pages/shoppingMalls/search/index',
-    'pages/stores/search/index',
+    'pages/search/index',
     'pages/region/index',
   ],
   window: {

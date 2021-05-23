@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { View, Text } from '@tarojs/components'
 import { AtIndexes, AtTabs, AtTabsPane, AtIcon } from 'taro-ui';
+import Taro from '@tarojs/taro';
 
 import {CITY, AREA} from './constants';
 import UseNavInfo from '../../components/useNavInfo';
@@ -17,6 +18,10 @@ const Index = () => {
   const onChangeTab = val => {
     setTab(val);
     setAreas(null);
+  };
+
+  const handelClickBackButton = () => {
+    Taro.navigateBack({delta: 1});
   };
 
   return (
@@ -36,7 +41,6 @@ const Index = () => {
           className='at-row at-row__align--center'
           style={{
             boxSizing: 'border-box',
-            padding: marginSides,
             width: titelBarWidth,
           }}
         >
@@ -44,12 +48,21 @@ const Index = () => {
             className='at-col at-col-1 at-col--auto'
             customStyle={{
               verticalAlign: 'middle',
+              padding: marginSides,
             }}
             prefixClass='iconfont' value='back'
+            onClick={handelClickBackButton}
           />
         </View>
       </View>
-      <AtTabs current={tab} tabList={tabList} onClick={onChangeTab}>
+      <AtTabs
+        customStyle={{
+          paddingTop: appHeaderHeight,
+        }}
+        current={tab}
+        tabList={tabList}
+        onClick={onChangeTab}
+      >
         <AtTabsPane current={tab} index={0} >
           <View>
             <AtIndexes topKey="" list={CITY} onClick={item => {

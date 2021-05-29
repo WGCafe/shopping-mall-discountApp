@@ -4,8 +4,6 @@ import { AtIcon } from 'taro-ui';
 
 import Taro from '@tarojs/taro';
 
-import ActionBar from '../../components/actionBar';
-
 import './index.styl';
 
 const ActionList = [

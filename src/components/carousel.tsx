@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Image, Swiper, SwiperItem } from '@tarojs/components'
 
 function Carousel({data}) {
@@ -18,7 +18,6 @@ function Carousel({data}) {
       {
         data.map((it, i) => (
           <SwiperItem key={i}>
-            {/* <view style={{height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>{it.text}</view> */}
             <Image src={it.src} mode="aspectFill" style={{width: '100%', height: '100%'}}/>
           </SwiperItem>
         ))

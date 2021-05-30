@@ -108,7 +108,10 @@ const Index = () => {
 
             <AtIcon
               className="at-col at-col-1 at-col--auto"
-              customStyle={{}}
+              customStyle={{
+                padding: '0.3rem 0.6rem',
+                fontSize: '2rem',
+              }}
               prefixClass='iconfont' value='phone_light'
             />
           </View>

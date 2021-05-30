@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { View, Text , Image } from '@tarojs/components'
-import { AtIcon } from 'taro-ui';
+import { View, Text, ScrollView, Image } from '@tarojs/components'
+import { AtIcon, AtAvatar, AtTag, AtList, AtListItem } from 'taro-ui';
 
 import Taro from '@tarojs/taro';
 
@@ -8,19 +8,22 @@ import './index.styl';
 
 const ActionList = [
   {
-    value: 'bookmark',
-    text: '收藏夹',
-    key: 'collect'
-  },
-  {
-    value: 'shopping-bag',
+    value: 'ticket',
+    count: 10,
     text: '优惠券',
     key: 'coupon'
   },
   {
-    value: 'help',
-    text: '联系客服',
-    key: 'help'
+    value: 'favor',
+    count: 110,
+    text: '收藏夹',
+    key: 'collect'
+  },
+  {
+    value: 'footprint',
+    count: 11,
+    text: '足迹',
+    key: 'histories'
   },
 ]
 function Index () {
@@ -34,7 +37,10 @@ function Index () {
   useEffect(() => {
     Taro.getUserInfo({
       success: function(res) {
-        setUserInfo(res.userInfo);
+        setUserInfo({
+          ...res.userInfo,
+          avatarUrl: '../../icons/my_avatar_light.png',
+        });
       }
     })
   }, []);
@@ -46,48 +52,88 @@ function Index () {
   };
 
   return (
-    <View style={{height: '100vh', padding: 20, backgroundColor: '#fff'}}>
-      <View style={{display: 'flex'}}>
-        <Image src={userInfo.avatarUrl} style={{width: 50, height: 50, borderRadius: 50}} />
+    <ScrollView className="account">
+      <View className="at-row at-row__align--center">
+        <AtAvatar
+          customStyle={{
+            backgroundColor: '#f6f6f6'
+          }}
+          circle
+          size='large'
+          image="../../icons/my_avatar_light.png"
+        />
         <View
           style={{
-            display: 'flex',
-            flexDirection: 'column',
             marginLeft: 10,
-            justifyContent: 'center'
           }}
         >
-          <Text style={{fontWeight: 'bold'}}>{userInfo.nickName}</Text>
-          <Text style={{fontSize: 12, color: '#ddd'}}>{userInfo.city} {userInfo.gender == 1 ? '男' : '女'}</Text>
+          <Text style={{ fontSize: '24px', verticalAlign: 'middle'}}>{userInfo.nickName}</Text>
+          <AtTag
+            customStyle={{
+              margin: '0 10px',
+              backgroundColor: '#ffc7c7',
+              color: '#ffffff',
+              fontWeight: 'bold',
+              verticalAlign: 'middle',
+            }}
+            circle
+            size='small'
+          >Lv4</AtTag>
         </View>
       </View>
-      <View
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          padding: 20,
-          boxShadow: '2px 2px 10px 2px #aaa',
-          margin: '20px 0'
-        }}
-      >
+      <View className="account__card">
         {
           ActionList.map(it => (
             <View
               key={it.key}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                flexDirection: 'column'
-              }}
+              className="account__card-item"
               onClick={() => handleClick(it.key)}
             >
-              <AtIcon value={it.value} size='30' />
-              <Text>{it.text}</Text>
+              <AtIcon className="account__card-icon" prefixClass='iconfont' value={it.value} size='24' />
+              <Text className="account__card-text">{it.text} <Text style={{color: '#a7a6b3'}}>{it.count}</Text></Text>
             </View>
           ))
         }
       </View>
-    </View>
+
+      <View className="account__list">
+        <AtList>
+          <AtListItem title='我的评价' arrow='right' onClick={() => {}} />
+          <AtListItem title='设置' arrow='right' onClick={() => {}} />
+          <AtListItem title='协议声明' arrow='right' onClick={() => {}} />
+        </AtList>
+      </View>
+
+      <View className="account__achive-medals">
+        <Text className="account__achive-medals-title">成就勋章</Text>
+        <View className='at-row at-row--wrap'>
+          <View className='at-col at-col-4'>
+            <Image className="account__achive-medals-image" src=""/>
+            <Text></Text>
+          </View>
+          <View className='at-col at-col-4'>
+            <Image className="account__achive-medals-image" src=""/>
+            <Text></Text>
+          </View>
+          <View className='at-col at-col-4'>
+            <Image className="account__achive-medals-image" src=""/>
+            <Text></Text>
+          </View>
+          <View className='at-col at-col-4'>
+            <Image className="account__achive-medals-image" src=""/>
+            <Text></Text>
+          </View>
+          <View className='at-col at-col-4'>
+            <Image className="account__achive-medals-image" src=""/>
+            <Text></Text>
+          </View>
+          <View className='at-col at-col-4'>
+            <Image className="account__achive-medals-image" src=""/>
+            <Text></Text>
+          </View>
+        </View>
+      </View>
+    </ScrollView>
   )
 }
 

@@ -1,7 +1,10 @@
 import React from 'react'
-import { View, Text } from '@tarojs/components'
+import { View } from '@tarojs/components'
 import { AtGrid } from 'taro-ui'
 import Carousel from '../../components/carousel';
+import { connect } from 'react-redux';
+import { add, minus, asyncAdd } from "../../actions/counter";
+
 
 import './index.styl';
 
@@ -56,4 +59,20 @@ function Index () {
 
 Index.defaultProps = {
 };
-export default Index;
+
+export default connect(({ counter }) => ({
+  counter
+ }), (dispatch) => ({
+  add () {
+  dispatch(add())
+   },
+  minus () {
+  dispatch(minus())
+   },
+  asyncAdd () {
+  dispatch(asyncAdd())
+   }
+ }))(Index)
+
+
+// export default Index;
